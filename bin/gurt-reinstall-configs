@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# gurt:summary=Reset all Gurt user configs to the defaults
+# gurt:requires-sudo=true
+
+set -e
+
+# Overwrite all user configs with the Gurt defaults.
+
+if (( EUID == 0 )); then
+  echo "Error: This script should not be run as root"
+  exit 1
+fi
+
+echo "Resetting all Gurt configs"
+cp -R ~/.local/share/gurt/config/* ~/.config/
+cp ~/.local/share/gurt/default/bashrc ~/.bashrc
+echo '[[ -f ~/.bashrc ]] && . ~/.bashrc' | tee ~/.bash_profile >/dev/null
+
+$(bash $GURT_PATH/install/config/theme.sh)
+
+gurt-refresh-limine
+gurt-refresh-plymouth
+gurt-nvim-setup

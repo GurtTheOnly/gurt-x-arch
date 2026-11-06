@@ -1,3 +1,3 @@
-if omarchy-hw-surface; then
-  omarchy-pkg-add linux-firmware-marvell
+if gurt-hw-surface; then
+  gurt-pkg-add linux-firmware-marvell
 fi

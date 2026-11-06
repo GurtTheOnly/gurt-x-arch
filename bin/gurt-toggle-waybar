@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# gurt:summary=Toggle Waybar visibility
+# gurt:examples=gurt toggle waybar
+
+gurt-toggle waybar-off
+
+if pgrep -x waybar >/dev/null; then
+  pkill -x waybar
+else
+  uwsm-app -- waybar >/dev/null 2>&1 &
+fi

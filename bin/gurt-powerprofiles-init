@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# gurt:summary=Set the correct power profile on boot based on current AC/battery state.
+
+if gurt-battery-present && ! gurt-ac-present; then
+  gurt-powerprofiles-set battery
+else
+  gurt-powerprofiles-set ac
+fi

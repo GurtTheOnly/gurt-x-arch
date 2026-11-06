@@ -1,7 +1,7 @@
 echo "Enable GPU in voxtype if Vulkan is available"
 
-if omarchy-cmd-present voxtype; then
-  if omarchy-hw-vulkan; then
+if gurt-cmd-present voxtype; then
+  if gurt-hw-vulkan; then
     echo "Vulkan is available, enabling GPU in voxtype"
     voxtype setup gpu --enable || true
   fi
@@ -12,5 +12,5 @@ if omarchy-cmd-present voxtype; then
   voxtype setup systemd
 
   systemctl --user restart voxtype
-  omarchy-restart-waybar
+  gurt-restart-waybar
 fi

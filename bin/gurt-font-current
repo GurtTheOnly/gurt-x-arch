@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# gurt:summary=Show current monospace font
+# gurt:examples=gurt font current
+
+grep -oP 'font-family:\s*["'\'']?\K[^;"'\'']+' ~/.config/waybar/style.css | head -n1

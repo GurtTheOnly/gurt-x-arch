@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Overwrite the user config for hyprlock with the Gurt default.
+
+gurt-refresh-config hypr/hyprlock.conf

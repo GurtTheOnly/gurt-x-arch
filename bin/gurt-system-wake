@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# gurt:summary=Wake displays and restore brightness after idle
+# gurt:group=system
+# gurt:name=wake
+# gurt:examples=gurt system wake
+
+gurt-brightness-display on
+gurt-brightness-keyboard restore

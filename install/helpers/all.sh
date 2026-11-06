@@ -1,4 +1,4 @@
-source $OMARCHY_INSTALL/helpers/chroot.sh
-source $OMARCHY_INSTALL/helpers/presentation.sh
-source $OMARCHY_INSTALL/helpers/errors.sh
-source $OMARCHY_INSTALL/helpers/logging.sh
+source $GURT_INSTALL/helpers/chroot.sh
+source $GURT_INSTALL/helpers/presentation.sh
+source $GURT_INSTALL/helpers/errors.sh
+source $GURT_INSTALL/helpers/logging.sh

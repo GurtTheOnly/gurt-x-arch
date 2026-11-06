@@ -1,3 +1,3 @@
-echo "Use new Omarchy mirror as default"
+echo "Use new Gurt mirror as default"
 
-omarchy-refresh-pacman
+gurt-refresh-pacman

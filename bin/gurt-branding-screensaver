@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# gurt:summary=Edit, set, or reset screensaver branding
+# gurt:group=branding
+# gurt:name=screensaver
+# gurt:args=<image|text|reset>
+# gurt:examples=gurt branding screensaver image | gurt branding screensaver text | gurt branding screensaver reset
+
+set -euo pipefail
+
+case "${1:-}" in
+image)
+  image=$(gurt-menu-file "Logo image" "$HOME" "svg png")
+  if [[ -n $image ]] && gurt-transcode-ascii "$image" ~/.config/gurt/branding/screensaver.txt; then
+    gurt-launch-screensaver force >/dev/null 2>&1
+  fi
+  ;;
+text)
+  gurt-launch-editor ~/.config/gurt/branding/screensaver.txt >/dev/null 2>&1 && gurt-launch-screensaver force >/dev/null 2>&1
+  ;;
+reset)
+  cp "$GURT_PATH/logo.txt" ~/.config/gurt/branding/screensaver.txt && gurt-launch-screensaver force >/dev/null 2>&1
+  ;;
+*)
+  echo "Usage: gurt-branding-screensaver <image|text|reset>" >&2
+  exit 1
+  ;;
+esac

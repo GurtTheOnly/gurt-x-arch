@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# gurt:summary=Reset Waybar config to Gurt defaults
+# gurt:examples=gurt refresh waybar
+
+gurt-refresh-config waybar/config.jsonc
+gurt-refresh-config waybar/style.css
+gurt-restart-waybar

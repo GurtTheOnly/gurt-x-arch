@@ -1,10 +1,10 @@
 echo "Switch back to mainline chromium now that it supports full live theming"
 
-if omarchy-pkg-present omarchy-chromium; then
+if gurt-pkg-present gurt-chromium; then
   if gum confirm "Ready to switch to mainstream chromium? (Will close Chromium + reset settings)"; then
     pkill -x chromium
-    omarchy-pkg-drop omarchy-chromium
-    omarchy-pkg-add chromium
-    omarchy-theme-set-browser
+    gurt-pkg-drop gurt-chromium
+    gurt-pkg-add chromium
+    gurt-theme-set-browser
   fi
 fi

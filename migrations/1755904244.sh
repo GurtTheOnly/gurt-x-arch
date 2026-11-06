@@ -1,6 +1,6 @@
-echo "Update fastfetch config with new Omarchy logo"
+echo "Update fastfetch config with new Gurt logo"
 
-omarchy-refresh-config fastfetch/config.jsonc
+gurt-refresh-config fastfetch/config.jsonc
 
-mkdir -p ~/.config/omarchy/branding
-cp $OMARCHY_PATH/icon.txt ~/.config/omarchy/branding/about.txt
+mkdir -p ~/.config/gurt/branding
+cp $GURT_PATH/icon.txt ~/.config/gurt/branding/about.txt

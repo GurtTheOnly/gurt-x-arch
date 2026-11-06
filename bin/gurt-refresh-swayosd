@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# gurt:summary=Overwrite the user configs for swayosd (controls on-screen feedback for changing volume/songs etc) with the Gurt defaults and restart the service.
+
+gurt-refresh-config swayosd/config.toml
+gurt-refresh-config swayosd/style.css
+gurt-restart-swayosd

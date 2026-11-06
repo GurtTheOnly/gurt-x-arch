@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# gurt:summary=Toggle screensaver availability
+
+gurt-toggle \
+  --enabled-notification "󱄄   Screensaver disabled" \
+  --disabled-notification "󱄄   Screensaver enabled" \
+  screensaver-off

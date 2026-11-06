@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# gurt:summary=Reboot after closing application windows
+# gurt:examples=gurt reboot | gurt system reboot
+# gurt:aliases=gurt reboot
+
+gurt-state clear re*-required
+
+# Schedule the reboot to happen after closing windows (detached from terminal)
+nohup bash -c "sleep 2 && systemctl reboot --no-wall" >/dev/null 2>&1 &
+
+# Now close all windows
+gurt-hyprland-window-close-all
+sleep 1 # Allow apps like Chrome to shutdown correctly

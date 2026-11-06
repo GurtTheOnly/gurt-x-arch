@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# gurt:summary=Log out after closing application windows
+# gurt:examples=gurt logout | gurt system logout
+# gurt:aliases=gurt logout
+
+nohup bash -c "sleep 2 && uwsm stop" >/dev/null 2>&1 &
+
+# Now close all windows
+gurt-hyprland-window-close-all
+sleep 1 # Allow apps like Chrome to shutdown correctly

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Detect ASUS ExpertBook B9406 series laptops on Intel Panther Lake.
+
+gurt-hw-match "B9406" && gurt-hw-intel-ptl

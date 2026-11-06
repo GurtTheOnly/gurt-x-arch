@@ -1,3 +1,3 @@
-if omarchy-hw-framework16; then
-  omarchy-pkg-add qmk-hid
+if gurt-hw-framework16; then
+  gurt-pkg-add qmk-hid
 fi

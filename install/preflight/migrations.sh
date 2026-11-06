@@ -1,6 +1,6 @@
-OMARCHY_MIGRATIONS_STATE_PATH=~/.local/state/omarchy/migrations
-mkdir -p $OMARCHY_MIGRATIONS_STATE_PATH
+GURT_MIGRATIONS_STATE_PATH=~/.local/state/gurt/migrations
+mkdir -p $GURT_MIGRATIONS_STATE_PATH
 
-for file in ~/.local/share/omarchy/migrations/*.sh; do
-  touch "$OMARCHY_MIGRATIONS_STATE_PATH/$(basename "$file")"
+for file in ~/.local/share/gurt/migrations/*.sh; do
+  touch "$GURT_MIGRATIONS_STATE_PATH/$(basename "$file")"
 done

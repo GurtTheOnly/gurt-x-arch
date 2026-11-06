@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# gurt:summary=Edit, set, or reset About branding
+# gurt:group=branding
+# gurt:name=about
+# gurt:args=<image|text|reset>
+# gurt:examples=gurt branding about image | gurt branding about text | gurt branding about reset
+
+set -euo pipefail
+
+case "${1:-}" in
+image)
+  image=$(gurt-menu-file "Logo image" "$HOME" "svg png")
+  if [[ -n $image ]] && gurt-transcode-ascii "$image" ~/.config/gurt/branding/about.txt --width 54 --height 26 --mode block; then
+    gurt-launch-about >/dev/null 2>&1
+  fi
+  ;;
+text)
+  gurt-launch-editor ~/.config/gurt/branding/about.txt >/dev/null 2>&1 && gurt-launch-about >/dev/null 2>&1
+  ;;
+reset)
+  cp "$GURT_PATH/icon.txt" ~/.config/gurt/branding/about.txt && gurt-launch-about >/dev/null 2>&1
+  ;;
+*)
+  echo "Usage: gurt-branding-about <image|text|reset>" >&2
+  exit 1
+  ;;
+esac

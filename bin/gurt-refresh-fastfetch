@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Overwrite the user config for fastfetch with the Gurt default.
+
+gurt-refresh-config fastfetch/config.jsonc

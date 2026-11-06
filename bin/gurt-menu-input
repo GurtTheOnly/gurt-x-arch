@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# gurt:summary=Prompt for text input with Walker
+# gurt:group=menu
+# gurt:name=input
+# gurt:args=prompt [walker args...]
+# gurt:examples=gurt menu input Reminder|gurt-menu-input "Reminder in minutes" --width 400
+
+set -euo pipefail
+
+prompt="${1:-Input}"
+if (( $# > 0 )); then
+  shift
+fi
+
+gurt-launch-walker --dmenu --inputonly --width 295 --minheight 1 --maxheight 1 -p "$prompt…" "$@" 2>/dev/null

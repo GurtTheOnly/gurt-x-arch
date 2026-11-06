@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# gurt:summary=Refresh the SDDM theme from default
+# gurt:requires-sudo=true
+
+sudo rm -rf /usr/share/sddm/themes/gurt
+sudo cp -r $GURT_PATH/default/sddm/gurt /usr/share/sddm/themes/gurt

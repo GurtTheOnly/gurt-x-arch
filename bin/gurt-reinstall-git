@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# gurt:summary=Reinstall the Gurt source directory from git
+
+set -e
+
+# Reinstall the Gurt configuration directory from the git source.
+
+git clone --depth=1 --branch master "https://github.com/GurtTheOnly/gurt-x-arch.git" ~/.local/share/gurt-new >/dev/null
+mv $GURT_PATH ~/.local/share/gurt-old
+mv ~/.local/share/gurt-new $GURT_PATH

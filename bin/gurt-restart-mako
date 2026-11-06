@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Reload mako configuration (used by the Gurt theme switching).
+
+makoctl reload

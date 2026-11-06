@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# gurt:summary=Launch the Gurt wifi controls (provided by the Impala TUI).
+
+rfkill unblock wifi
+gurt-launch-or-focus-tui impala

@@ -1,6 +1,6 @@
-# Copy over Omarchy configs
+# Copy over Gurt configs
 mkdir -p ~/.config
-cp -R ~/.local/share/omarchy/config/* ~/.config/
+cp -R ~/.local/share/gurt/config/* ~/.config/
 
-# Use default bashrc from Omarchy
-cp ~/.local/share/omarchy/default/bashrc ~/.bashrc
+# Use default bashrc from Gurt
+cp ~/.local/share/gurt/default/bashrc ~/.bashrc

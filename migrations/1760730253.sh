@@ -1,3 +1,3 @@
-echo "Install Aether for Omarchy theme creation"
+echo "Install Aether for Gurt theme creation"
 
-omarchy-pkg-add aether
+gurt-pkg-add aether

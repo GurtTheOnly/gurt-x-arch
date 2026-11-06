@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Print the current Gurt git branch
+
+echo $(git -C "$GURT_PATH" rev-parse --abbrev-ref HEAD)

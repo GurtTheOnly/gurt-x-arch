@@ -1,3 +1,3 @@
-if omarchy-hw-asus-rog; then
-  omarchy-pkg-add asusctl
+if gurt-hw-asus-rog; then
+  gurt-pkg-add asusctl
 fi

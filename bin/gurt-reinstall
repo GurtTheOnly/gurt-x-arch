@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# gurt:summary=Reinstall Gurt packages and reset default configs
+# gurt:requires-sudo=true
+
+set -e
+
+# Attempt to reinstall all default Gurt packages and reset all the default configs.
+
+echo -e "This will reinstall all the default Gurt packages and reset all default configs.\nWarning: All user changes to configs will be lost.\n"
+
+if gum confirm "Are you sure you want to reinstall and lose all config changes?"; then
+  gurt-reinstall-git
+  gurt-reinstall-pkgs
+  gurt-reinstall-configs
+
+  gum confirm "System has been reinstalled. Reboot?" && gurt-system-reboot
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# gurt:summary=Apply the current theme keyboard color to ASUS ROG keyboards
+# gurt:hidden=true
+
+ASUSCTL_THEME=~/.config/gurt/current/theme/keyboard.rgb
+
+if gurt-cmd-present asusctl; then
+  asusctl aura effect static -c $(sed 's/^#//' $ASUSCTL_THEME)
+fi

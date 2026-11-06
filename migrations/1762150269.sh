@@ -1,2 +1,2 @@
-echo "Install omarchy-walker meta package"
-omarchy-pkg-add omarchy-walker
+echo "Install gurt-walker meta package"
+gurt-pkg-add gurt-walker

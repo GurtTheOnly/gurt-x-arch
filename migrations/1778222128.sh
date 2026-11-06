@@ -1,7 +1,7 @@
 echo "Add sample post-boot hook"
 
-mkdir -p ~/.config/omarchy/hooks/post-boot.d
+mkdir -p ~/.config/gurt/hooks/post-boot.d
 
-if [[ ! -f ~/.config/omarchy/hooks/post-boot.d/weather.sample ]]; then
-  cp "$OMARCHY_PATH/config/omarchy/hooks/post-boot.d/weather.sample" ~/.config/omarchy/hooks/post-boot.d/weather.sample
+if [[ ! -f ~/.config/gurt/hooks/post-boot.d/weather.sample ]]; then
+  cp "$GURT_PATH/config/gurt/hooks/post-boot.d/weather.sample" ~/.config/gurt/hooks/post-boot.d/weather.sample
 fi

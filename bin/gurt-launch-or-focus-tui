@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# gurt:summary=Launch a TUI or focus an existing terminal window for it
+# gurt:args=<command> [args...]
+
+APP_ID="org.gurt.$(basename "$1")"
+LAUNCH_COMMAND="gurt-launch-tui $@"
+
+exec gurt-launch-or-focus "$APP_ID" "$LAUNCH_COMMAND"

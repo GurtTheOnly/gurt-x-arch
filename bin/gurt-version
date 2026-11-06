@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Print the installed Gurt version
+
+cat $GURT_PATH/version

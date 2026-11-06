@@ -1,3 +1,3 @@
-echo "Add Omarchy AI skill to pi, Codex, and shared Agent Skills directories"
+echo "Add Gurt AI skill to pi, Codex, and shared Agent Skills directories"
 
-source "$OMARCHY_PATH/install/config/omarchy-ai-skill.sh"
+source "$GURT_PATH/install/config/gurt-ai-skill.sh"

@@ -1,7 +1,7 @@
-omarchy-npx-install @openai/codex codex
-omarchy-npx-install @google/gemini-cli gemini
-omarchy-npx-install @github/copilot copilot
-omarchy-npx-install opencode-ai opencode
-omarchy-npx-install playwright playwright-cli
-omarchy-npx-install @earendil-works/pi-coding-agent pi
-omarchy-npx-install @kitlangton/ghui ghui
+gurt-npx-install @openai/codex codex
+gurt-npx-install @google/gemini-cli gemini
+gurt-npx-install @github/copilot copilot
+gurt-npx-install opencode-ai opencode
+gurt-npx-install playwright playwright-cli
+gurt-npx-install @earendil-works/pi-coding-agent pi
+gurt-npx-install @kitlangton/ghui ghui

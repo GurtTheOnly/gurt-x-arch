@@ -1,3 +1,3 @@
-echo "Switch to stable Omarchy Package Repository builds"
+echo "Switch to stable Gurt Package Repository builds"
 
-omarchy-refresh-pacman
+gurt-refresh-pacman

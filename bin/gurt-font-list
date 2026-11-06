@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# gurt:summary=List available monospace fonts
+# gurt:examples=gurt font list | gurt font set "CaskaydiaMono Nerd Font"
+
+fc-list :spacing=100 -f "%{family[0]}\n" | grep -v -i -E 'emoji|signwriting|gurt' | sort -u

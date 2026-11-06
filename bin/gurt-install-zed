@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# gurt:summary=Install Zed Editor and configure it with the current Gurt theme
+
+echo "Installing Zed Editor..."
+gurt-pkg-add zed omazed
+
+# Apply Gurt theme to Zed
+omazed setup
+
+setsid gtk-launch dev.zed.Zed

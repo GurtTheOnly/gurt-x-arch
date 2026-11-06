@@ -1,6 +1,6 @@
 echo "Make hackerman available as new theme"
 
-if [[ ! -L ~/.config/omarchy/themes/hackerman ]]; then
-  rm -rf ~/.config/omarchy/themes/hackerman
-  ln -nfs ~/.local/share/omarchy/themes/hackerman ~/.config/omarchy/themes/
+if [[ ! -L ~/.config/gurt/themes/hackerman ]]; then
+  rm -rf ~/.config/gurt/themes/hackerman
+  ln -nfs ~/.local/share/gurt/themes/hackerman ~/.config/gurt/themes/
 fi

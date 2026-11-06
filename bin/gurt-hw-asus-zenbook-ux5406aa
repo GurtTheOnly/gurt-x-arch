@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Detect ASUS Zenbook UX5406AA series laptops on Intel Panther Lake.
+
+gurt-hw-match "ux5406aa" && gurt-hw-intel-ptl

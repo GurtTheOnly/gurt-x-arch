@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# gurt:summary=Overwrite the user config for hypridle with the Gurt default and restart the service.
+
+gurt-refresh-config hypr/hypridle.conf
+gurt-restart-hypridle

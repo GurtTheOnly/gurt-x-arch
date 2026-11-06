@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# gurt:summary=Launch the Gurt audio controls TUI (provided by wiremix).
+
+gurt-launch-or-focus-tui wiremix

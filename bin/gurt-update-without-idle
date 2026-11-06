@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# gurt:summary=No-op now that gurt-update-perform is responsible for idle management.
+# gurt:hidden=true

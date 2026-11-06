@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# gurt:summary=Overwrite the user config for hyprsunset with the Gurt default and restart the service.
+
+gurt-refresh-config hypr/hyprsunset.conf
+gurt-restart-hyprsunset
