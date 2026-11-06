@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-GURT_BIN_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+GURT_BIN_DIR=$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")
 METADATA_SCAN_LIMIT=80
 
 COMMAND_KEYS=()
