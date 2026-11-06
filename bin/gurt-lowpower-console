@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# gurt:summary=Switch to the low-power pure-black TTY console (tty2)
+
+set -euo pipefail
+
+LOWPOWER_TTY=2
+GUI_TTY=$(cat /sys/class/tty/tty0/active)
+
+ensure_login_available() {
+  if ! systemctl is-enabled "getty@tty${LOWPOWER_TTY}.service" &>/dev/null; then
+    sudo systemctl enable "getty@tty${LOWPOWER_TTY}.service" &>/dev/null || true
+  fi
+}
+
+if [[ $GUI_TTY == "tty${LOWPOWER_TTY}" ]]; then
+  sudo chvt "1"
+  exit 0
+fi
+
+echo "Activating low-power console (tty${LOWPOWER_TTY}) — press Ctrl+Alt+F1 to return"
+
+ensure_login_available
+
+if command -v chvt &>/dev/null && chvt "$LOWPOWER_TTY" 2>/dev/null; then
+  exit 0
+fi
+
+sudo -n chvt "$LOWPOWER_TTY"
